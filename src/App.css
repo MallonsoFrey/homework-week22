@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.ratings {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.ratings span {
+  cursor: pointer;
+  transition: color .2s, transform .2s;
+  font-size: 50px;
+}
+
+.ratings span:hover {
+  color: orange;
+  transform: scale(1.3);
+}
+
+.ratings span:hover ~ span {
+  color: orange;
+}
+
+.ratings span[data-clicked] {
+  color: orange;
+}
+.ratings span[data-clicked] ~ span {
+  color: orange;
+}
+
